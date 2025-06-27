@@ -6,19 +6,37 @@ import axios from 'axios';
 
 const LOG_FIELDS = ['name', 'ingredients', 'directions', 'description', 'notes', 'source'];
 
-export function useRecipePoller(interval: number = 10000) {
+export function useRecipePoller(interval: number = 30000) {
   const recipeHashes: Ref<Record<string, string>> = ref({});
   const recipes: Ref<Record<string, RecipeDetail>> = ref({});
   const logs: Ref<any[]> = ref([]);
-  const email: Ref<string> = ref('');
-  const password: Ref<string> = ref('');
+  const email: Ref<string> = ref('skesler@outlook.com');
+  const password: Ref<string> = ref('lucy*inherit0saddle');
   const polling: Ref<boolean> = ref(false);
   const lastSuccess: Ref<Date | null> = ref(null);
   const error: Ref<string | null> = ref(null);
   let timer: ReturnType<typeof setInterval> | null = null;
+  let initialized = false;
+
+  async function loadCachedRecipes() {
+    try {
+      const response = await axios.get('http://localhost:3001/api/cached-recipes');
+      const cached: RecipeDetail[] = response.data;
+      for (const recipe of cached) {
+        recipes.value[recipe.uid] = recipe;
+        recipeHashes.value[recipe.uid] = recipe.hash;
+      }
+    } catch (e: any) {
+      // Ignore errors, just start with empty cache
+    }
+  }
 
   const poll = async () => {
     if (!email.value || !password.value) return;
+    if (!initialized) {
+      await loadCachedRecipes();
+      initialized = true;
+    }
     polling.value = true;
     error.value = null;
     try {
@@ -34,12 +52,16 @@ export function useRecipePoller(interval: number = 10000) {
             const diff = getDiff(oldRecipe, newRecipe);
             logs.value.push({ timestamp: new Date(), uid, diff });
             // Log to server if relevant fields changed
-            if (LOG_FIELDS.some(field => diff[field])) {
+            const filteredDiff = Object.fromEntries(
+              LOG_FIELDS.filter(field => diff[field]).map(field => [field, diff[field]])
+            );
+            console.log('Full diff:', diff);
+            console.log('Filtered diff:', filteredDiff);
+            console.log('LOG_FIELDS:', LOG_FIELDS);
+            if (Object.keys(filteredDiff).length > 0) {
               await axios.post('http://localhost:3001/api/log-recipe-change', {
                 name: newRecipe.name,
-                diff: Object.fromEntries(
-                  LOG_FIELDS.filter(field => diff[field]).map(field => [field, diff[field]])
-                )
+                diff: filteredDiff
               });
             }
           } else {
@@ -52,7 +74,6 @@ export function useRecipePoller(interval: number = 10000) {
       for (const uid in recipeHashes.value) {
         if (!(uid in newHashes)) {
           logs.value.push({ timestamp: new Date(), uid, diff: 'Recipe deleted' });
-          delete recipes.value[uid];
         }
       }
       recipeHashes.value = newHashes;

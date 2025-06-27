@@ -9,6 +9,6 @@
   </div>
 </template>
 
-<script setup>
-defineProps(['logs']);
+<script setup lang="ts">
+defineProps<{ logs: any[] }>();
 </script> 
