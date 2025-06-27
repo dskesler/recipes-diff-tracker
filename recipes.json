@@ -24649,5 +24649,37 @@
     "on_grocery_list": false,
     "created": "2018-07-23 14:51:55",
     "photo_url": "http://s3.amazonaws.com/uploads.paprikaapp.com/2509/7F082CBB-B68A-4295-B3FD-E44A9556B0DE-26481-000033639C7306A7.jpg?AWSAccessKeyId=AKIAQ656ARCHKEP3RMYH&Expires=1751068832&Signature=iBDiuixvFYpSQ%2BWEFZof%2F%2F4eswU%3D"
+  },
+  "FF120AAF-D3B2-4F8F-A531-B1273BBA5427-42164-0000E98A040D46D1": {
+    "uid": "FF120AAF-D3B2-4F8F-A531-B1273BBA5427-42164-0000E98A040D46D1",
+    "name": "Slow-Cooker Black Bean Soup",
+    "ingredients": "2 tablespoons vegetable oil\n3 medium onions, minced\n3 celery ribs, chopped medium\n2 medium carrots, chopped medium\n6 medium garlic cloves, minced or pressed through a garlic press (about 2 tablespoons)\n5 teaspoons ground cumin\n1/2 teaspoon red pepper flakes\nSalt\n3 cups water\n3 cups low-sodium chicken broth\n1 pound dried black beans (about 2 1/4 cups), picked over and rinsed\n2 medium smoked ham hocks\n2 bay leaves\n1/4 cup minced fresh cilantro leaves\nGround black pepper",
+    "directions": "1. Heat the oil in a 12-inch nonstick skillet over medium heat until shimmering but not smoking. Add the onions, celery, carrots, garlic, cumin, pepper flakes, and 1/4 teaspoon salt and cook until the vegetables are softened and lightly browned, 10 to 15 minutes.\n\n2. Transfer the vegetables to the slow cooker insert and stir in the water, broth, black beans, ham hocks, and bay leaves until evenly combined. Cover and cook on low until the soup has thickened and the beans are tender, 8 to 10 hours. (Alternatively, cover and cook on high for 6 to 7 hours.)\n\n3. Remove and discard the bay leaves. Remove the ham hocks and transfer them to a plate to cool. Meanwhile, puree 2 cups of the soup in a blender until smooth, then stir back into the slow cooker insert. When the hocks are cool enough to handle, remove any meat, discarding the skin, fat, and bones, and add the meat back to the soup. Stir in the cilantro, season with salt and pepper to taste, and serve.",
+    "description": null,
+    "notes": "WHY THIS RECIPE WORKS: We found that unsoaked beans worked fine in our slow-cooker black bean soup recipe. It was well worth the time and effort to sauté the aromatics before adding them to the cooker; the black bean soup recipe that skipped this step tasted flat. As for flavor, we knew we wanted a robust smoked pork presence. We tested our way through porky ingredients like bacon, kielbasa, ham, and ham hocks before deciding that the latter contributed all the depth we wanted. Once the soup was done—eight to 10 hours later—we stripped the meat from the hocks and stirred it into the beans.",
+    "nutritional_info": "",
+    "servings": "6 to 8",
+    "difficulty": "",
+    "prep_time": "",
+    "cook_time": "",
+    "total_time": null,
+    "source": "Cookscountry.com",
+    "source_url": "http://www.cookscountry.com/recipes/5365-slow-cooker-black-bean-soup",
+    "image_url": "http://d3cizcpymoenau.cloudfront.net/images/legacy/3621/detail_SFS_Slow-Cooker-Black-Bean-Soup_article.jpg",
+    "photo": "2B7EE917-2E50-409D-85AD-D6A6FA27A788-42164-0000E98A040EF044.jpg",
+    "photo_hash": "b32422667fa3fc447f8b12d785ecc7632b66fa15fbaf5efde92e87ae45f6a57f",
+    "photo_large": null,
+    "scale": "1/1",
+    "hash": "69ed50e903f9192bce44533aaf0c479e91d62200be871c2dee86df2a3a323ede",
+    "categories": [
+      "321B4EA8-974B-447D-AB3D-BA2581F3E4B1-42164-0000EBD34BF68F0B"
+    ],
+    "rating": 0,
+    "in_trash": false,
+    "is_pinned": false,
+    "on_favorites": false,
+    "on_grocery_list": false,
+    "created": "2014-12-27 15:41:00",
+    "photo_url": "http://s3.amazonaws.com/uploads.paprikaapp.com/2509/2B7EE917-2E50-409D-85AD-D6A6FA27A788-42164-0000E98A040EF044.jpg?AWSAccessKeyId=AKIAQ656ARCHKEP3RMYH&Expires=1751068894&Signature=V56FCM45%2BKmq%2FwKehNfXqbY9QWU%3D"
   }
 }
